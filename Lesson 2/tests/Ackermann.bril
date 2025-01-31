@@ -1,0 +1,34 @@
+@Ack(m: int, n: int): int {
+  zero: int = const 0;
+  one: int = const 1;
+
+  b1: bool = eq m zero;
+  b2: bool = eq n zero;
+  m1: int = sub m one;
+  n1: int = sub n one;
+
+  br b1 .meq0 .mge0;
+
+  .meq0:
+  ans: int = add n one;
+  ret ans;
+
+  .mge0:
+  br b2 .neq0 .nge0;
+
+  .neq0:
+  ans: int = call @Ack m1 one;
+  ret ans;
+
+  .nge0:
+  tem: int = call @Ack m n1;
+  ans: int = call @Ack m1 tem;
+  ret ans;
+}
+# ARGS: 3 4
+@main(a: int, b: int){
+  # a: int = const 3;
+  # b: int = const 4;
+  c: int = call @Ack a b;
+  print c;
+}
