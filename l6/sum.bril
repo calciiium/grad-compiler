@@ -1,0 +1,17 @@
+@sum(n: int): int {
+  one: int = const 1;
+  s: int = const 0;
+  b: bool = ge n s;
+  br b .this .end;
+  .this:
+  m: int = sub n one;
+  t: int = call @sum m;
+  s: int = add t n;
+  .end:
+  ret s;
+}
+@main {
+  a: int = const 5;
+  b: int = call @sum a;
+  print b;
+}

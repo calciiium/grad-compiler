@@ -1,0 +1,2 @@
+I implemented the live analysis for data flow analysis. Instead of directing running the live analysis algorithm, I wrote the generic worklist algorithm for both forward and backward direction first, and then adds live analysis in. 
+I didn't run brench or other large scaled tests for this task, because I couldn't think of a easy way to evaluate the correctness of live analysis results. Instead, I gathered some small tests from benchmark and other places, and manually check the correctness of the live analysis result. 

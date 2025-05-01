@@ -1,0 +1,2 @@
+I attempted to implement dominator map, dominance tree, and dominance frontiers. I believe there are hidden bugs in this program, although it passes all programs that are either simple or intermediately complicated. I arrived at this conclusion because l6 relies on l5's work, and all the benchmark failures from l6 are eventually traced back to a incorrect dominator/tree in l5. I tried to find all bugs but eventually gave up on it. 
+I should have use post order for dominator finding, and I highly suspect that's where it went wrong. 

@@ -1,0 +1,6 @@
+@main {
+	one: int = const 1;
+	set shadow one;
+	shadow: int = get;
+	print shadow;
+}

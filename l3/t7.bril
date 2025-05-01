@@ -1,0 +1,7 @@
+@main {
+	a: int = const 4;
+	c1: int = id a;
+	c2: int = id c1;
+	c3: int = id c2;
+	print c3;
+}

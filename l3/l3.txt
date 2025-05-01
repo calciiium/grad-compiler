@@ -1,0 +1,2 @@
+I did both LCV and DCE, and ran brench for tests. There are some failed tests from core benchmark, which suggests potential bugs. 
+I also implement several tricks for LCV. This includes constsant folding and partial copy propagation.
